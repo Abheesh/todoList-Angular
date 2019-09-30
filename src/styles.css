@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+.logo {
+    margin-left: 40%;
+    margin-top:10px;
+}
+.logo img {
+    max-width: 200px;
+}
+.sm-logo img {
+    max-width: 140px;
+}

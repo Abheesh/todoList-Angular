@@ -1,0 +1,20 @@
+.task-menu {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.task-menu button {
+    margin-right: 10px;
+}
+table {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px #CCC;
+}
+tbody {
+    font-size: 14px;
+}
+.width-10 {
+    width: 10%
+}
+.width-40 {
+    width: 40%
+}

@@ -1,0 +1,41 @@
+<div class="taskmanager">
+  <div class="task-menu">
+    <button class="btn btn-sm btn-primary" (click)="logout()">Logout</button>
+    <button class="btn btn-sm btn-primary" (click)="open()" >Add new task</button>
+  </div>
+  <div >
+    <ng-template #norecord>No record found.</ng-template>
+          <table class="table table-striped" *ngIf="tasks.length > 0; else norecord">
+                  <thead>
+                  <tr>
+                    <th scope="col" class="width-40">Task</th>
+                    <th scope="col" class="width-40">Description</th>
+                    <th scope="col" class="width-10">Status</th>
+                    <th scope="col" class="width-10">Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let task of tasks; index as i">
+                    
+                    <td>
+                     {{ task.title }}
+                    </td>
+                    <td>{{ task.description }}</td>
+                    <td>{{ actions[task.status - 1] }}</td>
+                    <td>
+                      <div ngbDropdown class="d-inline-block">
+                        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Actions</button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                          <button ngbDropdownItem *ngFor="let action of actions | slice: 1; index as j"  (click)="updateTask(task, j+2)">{{action}}</button>
+                          
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,11 @@
+.register-form {
+    
+    max-width: 450px;
+    margin: auto;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: 10px;
+}
+ngb-alert {
+    margin-top: 10px;
+}

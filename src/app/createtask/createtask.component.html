@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add new task</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+
+    <div>
+        <form #createTaskForm="ngForm" (ngSubmit)="createTask(createTaskForm.value)">
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" maxlength="255" name="title" class="form-control" ngModel required />
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea maxlength="255" name="desc" class="form-control" ngModel ></textarea>
+            </div>
+            <div class="modal-footer task-footer">
+                <button type="button" class="btn btn-sm btn-secondary"
+                    (click)="activeModal.close('Close click')">Close</button>
+                <button type="submit" class="btn btn-sm btn-primary" [disabled]="!createTaskForm.valid" >Add task</button>
+            </div>
+
+        </form>
+    </div>
+</div>
